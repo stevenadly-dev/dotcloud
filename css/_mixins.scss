@@ -1,0 +1,117 @@
+@mixin nonBorder {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+
+@mixin fx-center($dir :'row') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $dir;
+}
+
+@mixin txt-center() {
+    text-align: center;
+}
+
+@mixin mt50 {
+    margin-top: 50px;
+}
+
+
+@mixin h1h5() {
+
+    h1 {
+        @include media-breakpoint-down(lg) {
+            font-size: 1.6em;
+        }
+
+    }
+
+    h5 {
+        color: $white;
+        font-size: 1.2em;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 1em;
+        }
+
+    }
+}
+
+@mixin cardproperities() {
+
+    .shadow {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    }
+
+    .custom-card {
+
+
+
+        border-radius: 50px;
+        padding: 2em 1em 1em 1em;
+        margin-top: 30px;
+        @include media-breakpoint-down(lg){
+            margin-top: 50px;
+        }
+        
+
+        .img-container {
+            height: 150px;
+
+            img {
+                max-height: 80%;
+            }
+        }
+
+        .title {
+            text-align: left;
+            color: $blue;
+            // font-weight: bold;
+        }
+
+        .sub-title {
+            color: $gray;
+            font-weight: bold;
+            min-height: 40px;
+        }
+
+        .description {
+            color: $gray;
+            min-height: 130px;
+            line-height: 18px;
+            font-weight: 400;
+            font-size: 16px;
+            font-weight: 400;
+
+        }
+
+        .btn {
+            width: 90%;
+            padding: 10px;
+            color: #2980B9;
+            border: 1px solid #2980B9;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            font-weight: bold;
+
+            &:hover {
+                color: $white !important;
+                background: $blue !important;
+            }
+        }
+
+        &:hover,&.active {
+            transition: .5s;
+            transform: scale(1.1);
+            // background: $red;
+            // color: white !important;
+
+        }
+    }
+
+}

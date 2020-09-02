@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dot Cloud-webhosting-Email-webdesign</title>
+
+    <!-- <link rel="stylesheet" href="css/b4/scss/bootstrap.css"> -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lighbox.min.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/style2.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="shortcut icon" href="images/logo2.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+
+
+        <section class="homeContainer container404">
+            <div class="container">
+                <!--header-->
+                <div class="row"></div>
+
+                <div class="row fx-center">
+                    <div class="col-md-6 col-sm-8 text-center c-white">
+                        <h1 class="font-weight-bold heading">Oops...</h1>
+
+                          <small>LOOKS LIKE SOMETHING WENT WRONG </br>
+                            WE’RE WORKING ON IT
+                        </small>
+                        <img src="images/404main.png" class="w-100 image404" alt="">
+                        <h1 class="font-weight-bold heading">404</h1>
+                        <small>page not found
+                        </small>
+
+                        <a href="https://dotcloudco.com/" class="backToHome404">
+                            BACK TO HOME
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="contain-loader">
+            <div class="loader"></div>
+        </div>
+
+    </div><!-- /wrapper-->
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="js/popper.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+
+    <script src="js/light.min.js"></script>
+
+    <script src="js/smooth.min.js" charset="utf-8"></script>
+    <script src="js/aos.js"></script>
+    <!-- <script src="js/functions.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- <script src="js/calccoast.js" type="text/javascript" charset="utf-8"></script> -->
+
+    <script>
+        $(window).on('load', function () {
+
+            "use strict";
+
+            // Loading Elements
+
+            $(".contain-loader").fadeOut(2000, function () {
+
+                // Show The Scroll
+                $("body").css("overflow", "hidden");
+
+                $(this).fadeOut(2000, function () {
+                    $("body").css("overflow", "auto");
+                    $(this).remove();
+                });
+
+            });
+
+
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

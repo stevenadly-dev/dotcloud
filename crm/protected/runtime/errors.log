@@ -1,0 +1,56 @@
+2020/06/22 03:09:51 [error] [exception.CHttpException.400] CHttpException: The CSRF token could not be verified. in /home/dotcloudco/public_html/crm/framework/web/CHttpRequest.php:1362
+Stack trace:
+#0 /home/dotcloudco/public_html/crm/protected/components/X2HttpRequest.php(59): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 /home/dotcloudco/public_html/crm/framework/base/CComponent.php(561): X2HttpRequest->validateCsrfToken(Object(CEvent))
+#2 /home/dotcloudco/public_html/crm/framework/base/CApplication.php(212): CComponent->raiseEvent('onbeginrequest', Object(CEvent))
+#3 /home/dotcloudco/public_html/crm/framework/base/CApplication.php(183): CApplication->onBeginRequest(Object(CEvent))
+#4 /home/dotcloudco/public_html/crm/index.php(67): CApplication->run()
+#5 {main}
+REQUEST_URI=/crm/index.php/site/needsTwoFactor
+HTTP_REFERER=https://dotcloudco.com/crm/index.php/site/login
+---
+2020/06/22 03:10:03 [error] [exception.CHttpException.400] CHttpException: The CSRF token could not be verified. in /home/dotcloudco/public_html/crm/framework/web/CHttpRequest.php:1362
+Stack trace:
+#0 /home/dotcloudco/public_html/crm/protected/components/X2HttpRequest.php(59): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 /home/dotcloudco/public_html/crm/framework/base/CComponent.php(561): X2HttpRequest->validateCsrfToken(Object(CEvent))
+#2 /home/dotcloudco/public_html/crm/framework/base/CApplication.php(212): CComponent->raiseEvent('onbeginrequest', Object(CEvent))
+#3 /home/dotcloudco/public_html/crm/framework/base/CApplication.php(183): CApplication->onBeginRequest(Object(CEvent))
+#4 /home/dotcloudco/public_html/crm/index.php(67): CApplication->run()
+#5 {main}
+REQUEST_URI=/crm/index.php/site/needsTwoFactor
+HTTP_REFERER=https://dotcloudco.com/crm/index.php/site/login
+---
+2020/06/22 03:12:16 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #7 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'dotcloud_x2894.x2_actions.complete' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/dotcloudco/public_html/crm/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/dotcloudco/public_html/crm/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/dotcloudco/public_html/crm/protected/components/sortableWidget/recordViewWidgets/ActionHistoryChartWidget.php(124): CDbCommand->queryAll()
+#2 /home/dotcloudco/public_html/crm/protected/components/GetActionsBetweenAction.php(49): ActionHistoryChartWidget::getChartData('1592776800', '1592863199', '1', 'contacts', 'false')
+#3 [internal function]: GetActionsBetweenAction->run('1592776800', '1592863199', '1', 'Contacts', 'false')
+#4 /home/dotcloudco/public_html/crm/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(GetActionsBetweenAction), Array)
+#5 /home/dotcloudco/public_html/crm/framework/web/actions/CAction.php(74): CAction->runWithParamsInternal(Object(GetActionsBetweenAction), Object(ReflectionMethod), Array)
+#6 /home/dotcloudco/public_html/crm/framework/web/CController.php(308): CAction->runWithParams(Array)
+#7 /home/dotcloudco/public_html/crm/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(GetActionsBetweenAction))
+#8 /home/dotcloudco/public_html/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/dotcloudco/public_html/crm/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 /home/dotcloudco/public_html/crm/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/dotcloudco/public_html/crm/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/dotcloudco/public_html/crm/protected/controllers/x2base.php(581): CFilterChain->run()
+#13 /home/dotcloudco/public_html/crm/framework/web/filters/CInlineFilter.php(58): x2base->filterSetPortlets(Object(CFilterChain))
+#14 /home/dotcloudco/public_html/crm/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/dotcloudco/public_html/crm/protected/controllers/x2base.php(581): CFilterChain->run()
+#16 /home/dotcloudco/public_html/crm/framework/web/filters/CInlineFilter.php(58): x2base->filterSetPortlets(Object(CFilterChain))
+#17 /home/dotcloudco/public_html/crm/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/dotcloudco/public_html/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /home/dotcloudco/public_html/crm/framework/web/filters/CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#20 /home/dotcloudco/public_html/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /home/dotcloudco/public_html/crm/framework/web/filters/CFilterChain.php(131): CFilter->filter(Object(CFilterChain))
+#22 /home/dotcloudco/public_html/crm/framework/web/CController.php(291): CFilterChain->run()
+#23 /home/dotcloudco/public_html/crm/framework/web/CController.php(265): CController->runActionWithFilters(Object(GetActionsBetweenAction), Array)
+#24 /home/dotcloudco/public_html/crm/framework/web/CWebApplication.php(282): CController->run('GetActionsBetwe...')
+#25 /home/dotcloudco/public_html/crm/protected/components/X2WebApplication.php(65): CWebApplication->runController('site/GetActions...')
+#26 /home/dotcloudco/public_html/crm/framework/base/CApplication.php(185): X2WebApplication->processRequest()
+#27 /home/dotcloudco/public_html/crm/index.php(67): CApplication->run()
+#28 {main}
+REQUEST_URI=/crm/index.php/site/GetActionsBetweenAction?startTimestamp=1592776800&endTimestamp=1592863199&associationId=1&associationType=Contacts&showRelationships=false
+HTTP_REFERER=https://dotcloudco.com/crm/index.php/contacts/1
+---

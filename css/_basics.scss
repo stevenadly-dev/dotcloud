@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    // direction: rtl;
+}
+
+/*that fix over-flow-x right-left extra width issue*/
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.fx-center{
+    @include fx-center(column);
+}
+.fx-center-row{
+    @include fx-center(row);
+}
+
+.c-white{
+    color: $white;
+}
+.c-blue{
+    color: $blue;
+}
+.c-red{
+    color: $red;
+}
